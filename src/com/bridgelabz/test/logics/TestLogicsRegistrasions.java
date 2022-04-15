@@ -1,5 +1,6 @@
 package com.bridgelabz.test.logics;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -22,7 +23,7 @@ public class TestLogicsRegistrasions {
 	@Test
 	public void  testCheckStartWithCap() {
 		System.out.println("Test case Start With CAP");
-		assertEquals(true,ValidationOfRegexTest.CheckStartWithCap("Abjhghj"  ));
+		assertEquals("DTgjhjh",ValidationOfRegexTest.CheckStartWithCap("Abjhghj"  ));
 	}
 	
 	@Test
