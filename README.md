@@ -1,4 +1,5 @@
 # Day20-Projects-JUnit-Test
+www.bridgelabz.com
 To create a User Registration System needs to ensure all validations, Like First name starts with Cap and has minimum 3 characters,vailde Email etc  are in place during the User Entry
 As a User need to enter a valid Last Name - Last name starts with Cap and has minimum 3 characters
 As a User need to enter a valid email - E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, & co) and 2 optional (xyz & in) with precise @ and . positions)
