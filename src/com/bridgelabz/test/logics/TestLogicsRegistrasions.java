@@ -23,24 +23,25 @@ public class TestLogicsRegistrasions {
 	@Test
 	public void  testCheckStartWithCap() {
 		System.out.println("Test case Start With CAP");
-		assertEquals("DTgjhjh",ValidationOfRegexTest.CheckStartWithCap("Abjhghj"  ));
+		assertEquals(true,ValidationOfRegexTest.CheckStartWithCap("Nitish"  ));
 	}
 	
 	@Test
 	public void TestCheckAllDigit() {
 		System.out.println("Test Check All Digits");
-		assertEquals("85313",ValidationOfRegexTest.CheckAllDigit("654164"));
+		assertEquals(true,ValidationOfRegexTest.CheckAllDigit("918882160058"));
 	}
 	@Test
 	public void TestCheckPreDefinePassWord() {
 		System.out.println("Test Check Pre Define PassWord");
-		assertEquals("nit85313@",ValidationOfRegexTest.CheckAllDigit("jhjh@654164"));
+		assertEquals(true,ValidationOfRegexTest.CheckPreDefinePassWord("Nit853@1"));
 	}
 	@Test
 	public void TestCheckEmai() {
 		System.out.println("Test Check Pre Define PassWord");
-		Assert.assertEquals(true, ValidationOfRegexTest.CheckAllDigit("tyyt654164@gmail.com"));
+		assertEquals(true, ValidationOfRegexTest.CheckEmail("nkg@gmail.com"));
 	}
+	
 	@After
 	public void TesAfter() {
 		System.out.println("After") ;

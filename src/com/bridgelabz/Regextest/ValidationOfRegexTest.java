@@ -5,16 +5,21 @@ import java.util.regex.Pattern;
 
 public class ValidationOfRegexTest {
 	final static String CAP_LATTER ="^[A-Z].*";
-	public static void  CheckStartWithCap(String input) {
+	public static boolean  CheckStartWithCap(String input) {
 		
 		Pattern pattern = Pattern.compile(CAP_LATTER);
 		Matcher matcher = pattern.matcher(input);
 		
 		if(!matcher.find()) {
 			System.out.println("Please Enter First CAP..");
+			return false;
 		}
-}
-	final static String DIGIT_ONLY = "{1}[6-9]+[0-9]{9}/z";
+		else {
+			return true;
+		}
+	}
+
+	final static String DIGIT_ONLY = "(91)?[7-9][0-9]{9}";
 	public static boolean CheckAllDigit(String input) {
 		
 		Pattern pattern = Pattern.compile(DIGIT_ONLY);
@@ -30,24 +35,33 @@ public class ValidationOfRegexTest {
 	}
 	
 	
-	final static String PASSWORD_CHECK ="{1}[A-Z]+[a-z]+[@,!,@,#,%.$.&.*]+[0-9]";
-	public static void CheckPreDefinePassWord(String input) {
+	final static String PASSWORD_CHECK ="[A-Z-a-z0-9]+[@,!,@,#,%.$.&.*]+[0-9]";
+	public static boolean CheckPreDefinePassWord(String input) {
 		
 		Pattern pattern = Pattern.compile(PASSWORD_CHECK);
 		Matcher matcher = pattern.matcher(input);
 		if(!matcher.find()) {
 			System.out.println("Please Enter the Vailde the Password");
+			return false;
+		}
+		else {
+			return true;
 		}
 	}
-	final static String EMAIL_CHECK ="{1}^[a-z]+[0-9]+[/,@,!,@,#,%.$.&.*]+gmail.com";
-	public static void CheckEmail(String input) {
+	
+	final static String EMAIL_CHECK ="{1}^[a-z0-9]+[/,@,!,@,#,%.$.&.*]+[gmail.com]?";
+	public static boolean CheckEmail(String input) {
 		
 		Pattern pattern = Pattern.compile(EMAIL_CHECK);
 		Matcher matcher = pattern.matcher(input);
 		if(!matcher.find()) {
 			System.out.println("Please Enter the Vailde the Email");
+			return false;
+		}
+		else {
+			return true;
+		}
 		}
 	}
 	
 	
-}
