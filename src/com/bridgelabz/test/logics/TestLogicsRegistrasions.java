@@ -21,7 +21,7 @@ public class TestLogicsRegistrasions {
 		System.out.println("Before");
 	}
 	@Test
-	public void  testCheckStartWithCap() {
+	public void  testCheckStartWithCap() throws Exception {
 		System.out.println("Test case Start With CAP");
 		assertEquals(true,ValidationOfRegexTest.CheckStartWithCap("Nitish"  ));
 	}

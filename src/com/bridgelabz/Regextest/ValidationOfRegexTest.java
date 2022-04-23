@@ -5,7 +5,12 @@ import java.util.regex.Pattern;
 
 public class ValidationOfRegexTest {
 	final static String CAP_LATTER ="^[A-Z].*";
-	public static boolean  CheckStartWithCap(String input) {
+	public static boolean  CheckStartWithCap(String input)  throws Exception {
+		
+//			if (input.length()==0)
+//			{
+//				throw new Exception(ExceptionType.CAP_LATTER,"fIRST NAME cannot be empty");
+//			}
 		
 		Pattern pattern = Pattern.compile(CAP_LATTER);
 		Matcher matcher = pattern.matcher(input);
@@ -18,7 +23,12 @@ public class ValidationOfRegexTest {
 			return true;
 		}
 	}
-
+public static void Check(int lenght) throws NumberLessThanZero {
+	if(lenght==0) {
+		throw new NumberLessThanZero("name more than should be zero");
+	
+	}
+}
 	final static String DIGIT_ONLY = "(91)?[7-9][0-9]{9}";
 	public static boolean CheckAllDigit(String input) {
 		
